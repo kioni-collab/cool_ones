@@ -1,53 +1,72 @@
-create table theme (
+create table Asset_Type (
     id int primary key,
-    name text not null,
-    parent_id int null references theme(id)
+    name text unique
+
 );
 
-create table set (
-    set_num text primary key,
-    name text not null,
-    year int not null,
-    theme_id int not null references theme(id),
-    num_parts int not null
+create table Asset(
+    barcode int primary key,
+    model text,
+    purch_date date,
+    type int references Asset_Type(id)
 );
 
-create table inventory(
+create table Asset_Status(
     id int primary key,
-    version int not null,
-    set_num text not null references set(set_num)
+    name text unique,
+    Description text
+
+);
+create table Technician(
+    technician_id int primary key,
+    start_date date,
+    end_date date,
+    active boolean,
+    first_name text,
+    last_name text,
+    Manager int null references Technician(technician_id)
 );
 
-create table inventory_set(
-    inventory_id int not null references inventory(id),
-    set_num text not null references set(set_num),
-    quantity int not null,
-    unique(inventory_id, set_num)
+create table Account(
+    username text primary key,
+    password text,
+    technician_id unique references Technician(technician_id)
 );
 
-create table part_category(
+create table Building(
     id int primary key,
-    name text not null
+    name text,
+    Description text
 );
 
-create table part(
-    part_num text primary key,
-    name text not null,
-    part_cat_id int not null references part_category(id)
-);
-
-create table color (
+create table Dept(
     id int primary key,
-    name text not null,
-    rgb text not null,
-    is_trans boolean not null
+    name text,
+    Description text
+);
+create table Room(
+    room_num text
+    building text references Building(id)
+    primary key (room_num,building)
+);
+create table Dept_Room(
+    room text references Room(room_num)
+    Dept text references Dept(id) 
+);
+create table Ticket(
+    ticket_num text primary key
+    start_date date,
+    end_date date,
+    room text references Room(room_num)
+    technician_id int references Technician(technician_id)
+    client_name text,
+    Description text
+);
+create table Ticket_Asset(
+    ticket_num text references Ticket(ticket_num)
+    barcode int references Asset(barcode),
+    status string references
+    primary key (ticket_num,barcode)
 );
 
-create table inventory_part(
-    inventory_id int not null references inventory(id),
-    part_num text not null, -- references part(part_num),
-    color_id int not null references color(id),
-    quantity int not null,
-    is_spare boolean not null,
-    primary key (inventory_id, part_num, color_id, is_spare)
-);
+
