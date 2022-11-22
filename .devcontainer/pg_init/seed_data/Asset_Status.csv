@@ -1,0 +1,8 @@
+ID,Name,Description
+1,Redeploy,Asset has been redeployed
+2,New Asset,Asset was just bought
+3,Move,Asset was moved to diffrent location
+4,No Change,nothing was changed
+5,Spares,put into storage
+6,Scrapped,Thrown out
+7,Stolen/Lost,Stolen/Lost
