@@ -30,9 +30,8 @@ create table Technician(
 create table Account(
     username text primary key,
     password text,
-    technician_id unique references Technician(technician_id)
+    technician_id int unique references Technician(technician_id)
 );
-
 create table Building(
     id int primary key,
     name text,
@@ -45,28 +44,30 @@ create table Dept(
     Description text
 );
 create table Room(
-    room_num text
-    building text references Building(id)
-    primary key (room_num,building)
+    room_num text,
+    building int references Building(id),
+    Primary key(room_num,building)
 );
 create table Dept_Room(
-    room text references Room(room_num)
-    Dept text references Dept(id) 
+    room_num text,
+	building int,
+    Dept int references Dept(id),
+	Foreign Key (room_num,building) REFERENCES Room(room_num,building)
 );
 create table Ticket(
-    ticket_num text primary key
+    ticket_num text primary key,
     start_date date,
     end_date date,
-    room text references Room(room_num)
-    technician_id int references Technician(technician_id)
+    room_num text,
+	building int,
+    technician_id int references Technician(technician_id),
     client_name text,
-    Description text
+    Description text,
+	Foreign Key (room_num,building) REFERENCES Room(room_num,building)
 );
 create table Ticket_Asset(
-    ticket_num text references Ticket(ticket_num)
+    ticket_num text references Ticket(ticket_num),
     barcode int references Asset(barcode),
-    status string references
+    status int references Asset_Status(id),
     primary key (ticket_num,barcode)
 );
-
-

@@ -1,5 +1,5 @@
 Technician_id,Start_Date,End_Date,Active,Fist_Name,Last_Name,Manager
-1,9/06/2018,Null,True,My Linh,Quach,Null
-2,9/12/2020,Null,True,Natalie,Sayre,1
+1,9/06/2018,,True,My Linh,Quach,
+2,9/12/2020,,True,Natalie,Sayre,1
 3,9/22/2021,12/17/2021,False,Kioni,Kamau,1
-4,12/20/2021,Null,True,Zane,Davenport,2
+4,12/20/2021,,True,Zane,Davenport,2

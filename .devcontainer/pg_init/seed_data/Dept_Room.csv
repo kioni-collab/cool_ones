@@ -1,4 +1,4 @@
-Room,Dept 
-Student Success Center,AADV
-(comptuer workshop, 2nd floor),CSCI
-207-B,HUMA
+Room,Building,Dept 
+Student Success Center,1,1
+(comptuer workshop 2nd floor),2,2
+207-B,3,3

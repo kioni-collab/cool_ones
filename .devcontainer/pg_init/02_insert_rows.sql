@@ -33,12 +33,12 @@ from '/docker-entrypoint-initdb.d/seed_data/Room.csv'
 delimiter ','
 csv header;
 
-copy Dept_Room(room,Dept)
+copy Dept_Room(room_num,building,Dept)
 from '/docker-entrypoint-initdb.d/seed_data/Dept_Room.csv'
 delimiter ','
 csv header;
 
-copy   Ticket(ticket_num,start_date,end_date,room,technician_id,client_name,Description)
+copy   Ticket(ticket_num,start_date,end_date,room_num,building,technician_id,client_name,Description)
 from '/docker-entrypoint-initdb.d/seed_data/Ticket.csv'
 delimiter ','
 csv header;
