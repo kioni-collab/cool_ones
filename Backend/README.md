@@ -1,4 +1,3 @@
-<<<<<<<< HEAD:Backend/README.md
 # cool_ones BackEnd
 ## Developing in VS Code with the Remote Development Extension Pack
 
@@ -37,6 +36,3 @@ Lego database server credentials from the "Add New Server" dialog):
 **Connection -> Host**: `db`
 **Connection -> Username**: `postgres`
 **Connection -> Password**: `postgres`
-========
-# cool_ones
->>>>>>>> 9ddccba379da44d2de6b1c93be2827fdf456bf2a:README.md
