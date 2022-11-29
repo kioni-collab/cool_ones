@@ -35,3 +35,15 @@ def search_buildings(cur: cursor, building: int):
     """, {building:AsIs(building)})
     return cur
 
+#DOC: return all rooms assocaited with a department 
+def search_dept(cur: cursor, dept: int):
+    cur.execute("""select r.room_num, b.name, d.name
+    from dept d
+    inner join dept_room dr on dr.dept = d.id
+    inner join room r on r.room_num = dr.room_num and r.building = dr.building
+    inner join building b on r.building = b.id
+    where d.id =%(dept)s
+    """, {dept:AsIs(dept)})
+    return cur
+
+
