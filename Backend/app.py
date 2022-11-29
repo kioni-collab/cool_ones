@@ -13,11 +13,15 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-# TODO: create /sets HTML endpoint
+# TODO: create HTML endpoint and 
+# parametrs for each GET Method
+ 
+# DOC: will return all assets in room in a json
 @app.route("/room", methods=['GET'])
 def search_room():
     pass
 
+#Doc: returns all rooms in a building
 @app.route("/building", methods=['GET'])
 def search_building():
     pass
