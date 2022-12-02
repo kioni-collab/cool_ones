@@ -104,7 +104,7 @@ def add_ticket():
     barcode = safe_int(request.form["barcode"],1)
     status = int(request.form["status"])
     with conn.cursor() as cur:
-        if safe_id(status,valid_status_id(cur)) and safe_id(barcode,valid_asset(cur)):
+        if safe_id(status,[i["id"] for i in valid_status_id(cur)]) and safe_id(barcode,[i["barcode"] for i in valid_asset(cur)]):
             add_ticket_db(cur, ticket_num, start_date, end_date,
                         room_num, building_id, tech_id, client_name, descr)
             add_ticket_asset_db(cur,ticket_num,barcode,status)
