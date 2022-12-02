@@ -46,6 +46,7 @@ create table Dept(
 create table Room(
     room_num text,
     building int references Building(id),
+    floor int,
     Primary key(room_num,building)
 );
 create table Dept_Room(
