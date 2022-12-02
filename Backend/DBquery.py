@@ -87,15 +87,15 @@ def add_ticket_asset_db(cur:cursor,ticker_num:int,barcode:int,status:int):
 
 def search_asset_location_db(cur: cursor, barcode: int):
     cur.execute("""
-   select room_num, building from
-        (select r.room_num as room_num, b.name as building, t.ticket_num, t.end_date
+   select room_num, building,floor from
+        (select r.room_num as room_num, r.floor as floor,b.name as building, t.ticket_num, t.end_date
         from asset a
         inner join ticket_asset ta on ta.barcode = a.barcode
         inner join ticket t on t.ticket_num = ta.ticket_num
         inner join room r on t.room_num = r.room_num and t.building = r.building
         inner join building b on b.id = r.building
 		 where a.barcode = %(barcode)s
-        group by r.room_num, b.name,t.ticket_num
+        group by r.room_num, r.floor, b.name,t.ticket_num
 		order by t.end_date desc
 		limit 1) as latest
     """, {"barcode": barcode})

@@ -1,4 +1,4 @@
-Room,Building
-Student Success Center,1
-(comptuer workshop 2nd floor),2
-207-B,3
+Room,Building,Floor
+Student Success Center,1,1
+(comptuer workshop 2nd floor),2,2
+207-B,3,2
