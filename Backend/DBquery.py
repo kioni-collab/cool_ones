@@ -77,14 +77,21 @@ def add_ticket_db(cur: cursor, ticket_num: int, start_date: datetime, end_date: 
     return bool(cur)
 
 #todo need to figure out how to add ticket only if status is valid so all tickets have a status
-def add_ticket_asset_db(cur:cursor,ticker_num:int,barcode:int,status:int):
+def add_ticket_asset_db(cur:cursor,ticket_num:int,barcode:int,status:int):
     cur.execute("""
     insert into ticket_Asset (ticket_num,barcode,status)
     values (%(ticket_num)s,%(barcode)s,%(status)s)
     ON CONFLICT DO NOTHING
-    """, {"ticket_num":ticker_num,"barcode":barcode,"status":status})
+    """, {"ticket_num":ticket_num,"barcode":barcode,"status":status})
     return bool(cur)
 
+def add_asset_db(cur:cursor,barcode:int,model:str,purch_date:datetime,type:int):
+    cur.execute("""
+    insert into asset (barcode,model,purch_date,type)
+    values (%(barcode)s,%(model)s,%(purch_date)s,%(type)s)
+    ON CONFLICT DO NOTHING
+    """, {"barcode":barcode, "model":model,"purch_date":purch_date, "type":type})
+    return bool(cur)
 
 def search_asset_location_db(cur: cursor, barcode: int):
     cur.execute("""
@@ -95,9 +102,44 @@ def search_asset_location_db(cur: cursor, barcode: int):
         inner join ticket t on t.ticket_num = ta.ticket_num
         inner join room r on t.room_num = r.room_num and t.building = r.building
         inner join building b on b.id = r.building
-		 where a.barcode = %(barcode)s
+		where a.barcode = %(barcode)s
         group by r.room_num, r.floor, b.name,t.ticket_num
 		order by t.end_date desc
 		limit 1) as latest
     """, {"barcode": barcode})
+    return list(cur)
+
+def search_ticket_history_db(cur:cursor,ticket_num,end_date:datetime,status,room_num,building_id,tech_first_name,tech_last_name,client_name,barcode ):
+    status_where = ""
+    end_where = ""
+    building_where = ""
+    barcode_where = ""
+    if isinstance(status, int):
+        status_where = f"AND ts.status = {status}"
+    if isinstance(end_date, datetime.datetime):
+        end_date_formated = end_date.strftime("%m/%d/%Y") 
+        end_where = f" AND t.end_date = {end_date_formated}"
+    if isinstance(building_id, int):
+        building_where = f"AND t.building = {building_id}"
+    if isinstance(barcode, int):
+        barcode_where = f"AND a.barcode = {barcode}"
+    
+
+    cur.execute("""
+    select t.*,s.name as Status, a.*,ty.name as Type, b.name as Building ,d.name as Dept, te.first_name, te.last_name
+    from ticket t
+    inner join ticket_asset ts on t.ticket_num = ts.ticket_num
+    inner join asset_status s on s.id = ts.status
+    inner join asset a on a.barcode = ts.barcode
+    inner join asset_type ty on ty.id = a.type
+    inner join Technician te on te.technician_id  = t.technician_id
+    inner join room r on r.room_num = t.room_num
+    inner join building b on b.id = r.building
+    inner join Dept_Room dr on dr.room_num = r.room_num and dr.building  = r.building
+    inner join dept d on d.id = dr.dept
+    where t.ticket_num Like %(ticket_num)s AND lower(t.room_num) like lower(%(room_num)s) AND lower(t.client_name) like lower(%(client_name)s) AND lower(te.first_name) like lower(%(tech_first_name)s) And lower(te.last_name) like lower(%(tech_last_name)s)
+    %(status_where)s %(end_where)s %(building_where)s %(barcode_where)s 
+    """, {"ticket_num":"%"+ticket_num+"%", "room_num":"%"+room_num + "%", "client_name": "%"+client_name+"%", "status_where":AsIs(status_where),
+    "tech_first_name": "%"+tech_first_name+"%", "tech_last_name":"%"+tech_last_name+"%", 
+    "end_where": AsIs(end_where),"building_where":AsIs(building_where), "barcode_where":AsIs(barcode_where) })
     return list(cur)
