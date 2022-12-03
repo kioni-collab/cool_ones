@@ -71,16 +71,16 @@ def add_ticket_db(cur: cursor, ticket_num: int, start_date: datetime, end_date: 
                   descr: str):
     cur.execute("""
     insert into Ticket(ticket_num,start_date,end_date,room_num,building,technician_id,client_name,Description)
-    values (%(ticket_num)s,%(start_date)s,%(end_date)s,%(room_num)s,%(building)s, %(tech_id)s,%(client_name)s, %(descr)s)
-    """, {"ticket_num": ticket_num, "start_date": start_date.strftime("%m/%d/%Y"), "end_date": end_date.strftime("%m/%d/%Y"), "room_num": room_num, "building": AsIs(building), "tech_id": AsIs(tech_id),"client_name":client_name, "descr": descr}
+    values (%(ticket_num)s,%(start_date)s,%(end_date)s,%(room_num)s,%(building)s, %(tech_id)s,%(client_name)s, %(descr)s) 
+    ON CONFLICT DO NOTHING""", {"ticket_num": ticket_num, "start_date": start_date.strftime("%m/%d/%Y"), "end_date": end_date.strftime("%m/%d/%Y"), "room_num": room_num, "building": AsIs(building), "tech_id": AsIs(tech_id),"client_name":client_name, "descr": descr}
     )
-    print(cur)
 
 #todo need to figure out how to add ticket only if status is valid so all tickets have a status
 def add_ticket_asset_db(cur:cursor,ticker_num:int,barcode:int,status:int):
     cur.execute("""
     insert into ticket_Asset (ticket_num,barcode,status)
     values (%(ticket_num)s,%(barcode)s,%(status)s)
+    ON CONFLICT DO NOTHING
     """, {"ticket_num":ticker_num,"barcode":barcode,"status":status})
     pass
 

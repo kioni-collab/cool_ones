@@ -108,6 +108,7 @@ def add_ticket():
             add_ticket_db(cur, ticket_num, start_date, end_date,
                         room_num, building_id, tech_id, client_name, descr)
             add_ticket_asset_db(cur,ticket_num,barcode,status)
+    conn.commit()
 
         
 
