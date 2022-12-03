@@ -1,5 +1,5 @@
 import psycopg2
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,Response
 from flask_cors import CORS
 from psycopg2.extras import RealDictCursor
 import math
@@ -69,18 +69,7 @@ def search_computer_location():
 def search_ticket_history():
     pass
 
-
-@app.route("/login", methods=['GET'])
-def login():
-    pass
-
-
-@app.route("/profile", methods=['GET'])
-def profile_info():
-    pass
-
-
-@app.route("/newticket", methods=['POST'])
+@app.route("/newticket", methods=['PUT'])
 #DOC: addes a new tickets, first checks if status and barcode are valid 
 # to make sure we dont add an element into the ticket table that doesnt correspond 
 # ticket asset table. then inset into both tables first tickets then ticket assets
@@ -105,9 +94,15 @@ def add_ticket():
     status = int(request.form["status"])
     with conn.cursor() as cur:
         if safe_id(status,[i["id"] for i in valid_status_id(cur)]) and safe_id(barcode,[i["barcode"] for i in valid_asset(cur)]):
-            add_ticket_db(cur, ticket_num, start_date, end_date,
+            result1 = add_ticket_db(cur, ticket_num, start_date, end_date,
                         room_num, building_id, tech_id, client_name, descr)
-            add_ticket_asset_db(cur,ticket_num,barcode,status)
+            result2 = add_ticket_asset_db(cur,ticket_num,barcode,status)
+            if result1 and result2:
+                return Response(status=200, mimetype='application/json')
+            else:
+                Response("{'error_message':'Insert failed'}", status=500, mimetype='application/json')
+        else:
+            return Response("{'field_name': 'barcode or status','error_message':'Status or barcode not regonized'}", status=400, mimetype='application/json')
     conn.commit()
 
         
