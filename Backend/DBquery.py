@@ -83,7 +83,7 @@ def add_ticket_asset_db(cur:cursor,ticker_num:int,barcode:int,status:int):
     values (%(ticket_num)s,%(barcode)s,%(status)s)
     ON CONFLICT DO NOTHING
     """, {"ticket_num":ticker_num,"barcode":barcode,"status":status})
-    return cur
+    return bool(cur)
 
 
 def search_asset_location_db(cur: cursor, barcode: int):
