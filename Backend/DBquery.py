@@ -7,6 +7,7 @@ import datetime
 from psycopg2.extensions import cursor, AsIs
 
 
+
 def valid_building_id(cur: cursor):
     """
     DOC: Returns all valid Building ID's, for parameter checking
@@ -38,6 +39,12 @@ def valid_asset(cur:cursor):
     cur.execute("select barcode from asset")
     return list(cur)
 
+def all_buildings(cur:cursor):
+    cur.execute("""
+    select name 
+    from building
+    """)
+    return list(cur)
 
 def search_room_db(cur: cursor, room_num: str, building: int):
     """
@@ -55,7 +62,7 @@ def search_room_db(cur: cursor, room_num: str, building: int):
     where r.room_num = %(room_num)s and  r.building  = %(building)s 
     group by a.barcode) as latest
     inner join asset_type at on at.id = latest.type
-    """, {"room_num": room_num, "building": AsIs(building)})
+    order by  barcode""", {"room_num": room_num, "building": AsIs(building)})
     return list(cur)
 
 
