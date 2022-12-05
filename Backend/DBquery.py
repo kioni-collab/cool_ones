@@ -7,17 +7,12 @@ import datetime
 from psycopg2.extensions import cursor, AsIs
 
 
-
-
-
 def valid_building_id(cur: cursor):
     """
     DOC: Returns all valid Building ID's, for parameter checking
     """
     cur.execute("select id from building")
     return list(cur)
-
-
 
 
 def valid_dept_id(cur: cursor):
@@ -27,6 +22,7 @@ def valid_dept_id(cur: cursor):
     cur.execute("select id from dept")
     return list(cur)
 
+
 def valid_status_id(cur: cursor):
     """
     DOC: Returns all valid ID's from Asset_status, for parameter checking
@@ -34,16 +30,13 @@ def valid_status_id(cur: cursor):
     cur.execute("select id from asset_status")
     return list(cur)
 
+
 def valid_asset(cur:cursor):
     """
     DOC: Returns all valid barcodes from asset, for parameter checking
     """
     cur.execute("select barcode from asset")
     return list(cur)
-
-# DOC: Finds all the assets in a room
-# works by finding the latest tickets associeted
-# with a asset and filters by room and building
 
 
 def search_room_db(cur: cursor, room_num: str, building: int):
@@ -63,8 +56,6 @@ def search_room_db(cur: cursor, room_num: str, building: int):
     group by a.barcode) as latest""", {"room_num": room_num, "building": AsIs(building)})
     return list(cur)
 
-# DOC: retuns all rooms in a building and the building name
-
 
 def search_building_db(cur: cursor, building: int):
     """
@@ -77,8 +68,6 @@ def search_building_db(cur: cursor, building: int):
     where b.id = %(building)s
     """, {"building": AsIs(building)})
     return list(cur)
-
-
 
 
 def search_dept_db(cur: cursor, dept: int):
@@ -132,6 +121,7 @@ def add_ticket_asset_db(cur:cursor,ticket_num:int,barcode:int,status:int):
     """, {"ticket_num":ticket_num,"barcode":barcode,"status":status})
     return bool(cur)
 
+
 def add_asset_db(cur:cursor,barcode:int,model:str,purch_date:datetime,type:int):
     """
     DOC: Adds new asset from params, to be used in adding new tickets
@@ -142,6 +132,7 @@ def add_asset_db(cur:cursor,barcode:int,model:str,purch_date:datetime,type:int):
     ON CONFLICT DO NOTHING
     """, {"barcode":barcode, "model":model,"purch_date":purch_date, "type":type})
     return bool(cur)
+
 
 def search_asset_location_db(cur: cursor, barcode: int):
     """
@@ -161,6 +152,7 @@ def search_asset_location_db(cur: cursor, barcode: int):
 		limit 1) as latest
     """, {"barcode": barcode})
     return list(cur)
+
 
 def search_ticket_history_db(cur:cursor,
                             ticket_num,
@@ -212,5 +204,20 @@ def search_ticket_history_db(cur:cursor,
     "end_where": AsIs(end_where),
     "building_where":AsIs(building_where),
     "barcode_where":AsIs(barcode_where) })
+    return list(cur)
+
+
+def get_asset_specs(cur:cursor,barcode):
+    """
+    DOC: Using a given barcode, finds the model, purchase date, status, and type of asset
+    """
+    cur.execute("""
+    select a.Barcode, a.Model, a.Purch_date, at.name, as.name
+    from asset as a
+    inner join asset_type as at on a.type=at.id
+    inner join ticket_asset as ta on a.barcode=ta.barcode
+    inner join asset_status as as on ta.status=as.id
+    where a.barcode = %(barcode)s
+    """, {"barcode": barcode})
     return list(cur)
     
