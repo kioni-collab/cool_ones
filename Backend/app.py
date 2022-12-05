@@ -8,8 +8,9 @@ from flask import Flask, render_template, request,Response
 from flask_cors import CORS
 from psycopg2.extras import RealDictCursor
 from DBquery import (search_room_db, search_building_db, search_dept_db,
-                    search_asset_location_db, search_ticket_history_db)
-from DBquery import add_ticket_db,add_ticket_asset_db,add_asset_db,valid_status_id,valid_asset
+                    search_asset_location_db, search_ticket_history_db,
+                    add_ticket_db,add_ticket_asset_db,add_asset_db,
+                    valid_status_id,valid_asset,get_asset_specs)
 from util import safe_int, safe_date, safe_id
 
 conn = psycopg2.connect(
@@ -63,7 +64,15 @@ def search_dept():
 
 @app.route("/computerspecs", methods=['GET'])
 def search_computer_specs():
-    """TODO: ZANE"""
+    """
+    given a barcode, calls get_asset_specs to search the database
+    for certain specs (status, model, etc.)
+    see get_asset_specs in DBQuery for more specifics
+    """
+    barcode = safe_int(request.args.get('barcode', 1), 1)
+    with conn.cursor() as cur:
+        results = get_asset_specs(cur,barcode)
+        return results
 
 
 @app.route("/computerlocation", methods=['GET'])
