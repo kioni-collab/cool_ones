@@ -10,7 +10,7 @@ from psycopg2.extras import RealDictCursor
 from DBquery import (search_room_db, search_building_db, search_dept_db,
                     search_asset_location_db, search_ticket_history_db,
                     add_ticket_db,add_ticket_asset_db,add_asset_db,
-                    valid_status_id,valid_asset,get_asset_specs)
+                    valid_status_id,valid_asset,get_asset_specs,all_buildings )
 from util import safe_int, safe_date, safe_id
 
 conn = psycopg2.connect(
@@ -36,6 +36,8 @@ def search_room():
     """DOC: will return all assets in room in a json"""
     room_num = request.args.get('room_num', "Student Success Center")
     building_id = safe_int(request.args.get('building_id', 1), 1)
+    limit  = safe_int(request.arg.get('limit',"25"),25)
+
     with conn.cursor() as cur:
         results = search_room_db(cur, room_num, building_id)
         return results
@@ -62,7 +64,7 @@ def search_dept():
         return results
 
 
-@app.route("/computerspecs", methods=['GET'])
+@app.route("/assetspecs", methods=['GET'])
 def search_computer_specs():
     """
     given a barcode, calls get_asset_specs to search the database
@@ -75,7 +77,7 @@ def search_computer_specs():
         return results
 
 
-@app.route("/computerlocation", methods=['GET'])
+@app.route("/assetlocation", methods=['GET'])
 def search_computer_location():
     """DOC: Searches for an assets location (Room number, flooor, building name, and asset)
     By searching for ticket's that match the barcode, ordered by the latest ticket,
@@ -134,7 +136,7 @@ def add_ticket():
                          datetime.datetime(1900, 1, 1))
     barcode = safe_int(request.form["barcode"],1)
     status = int(request.form["status"])
-    adding_asset =  request.form["adding_asset"] or False
+    adding_asset =  bool(request.form["adding_asset"])
     if adding_asset:
         model = request.form["model"] or ""
         purch_year = request.form["purch_year"]
@@ -142,7 +144,7 @@ def add_ticket():
         purch_day = request.form["purch_day"]
         purch_date = safe_date(purch_year, purch_month,
                            purch_day, datetime.datetime(1900, 1, 1))
-        type = request.form["type"]
+        type = int(request.form["type"])
         add_asset_option(barcode,model,purch_date,type)
 
     with conn.cursor() as cur:
@@ -161,3 +163,9 @@ def add_ticket():
             "{'field_name': 'barcode or status','error_message':'Status or barcode not regonized'}",
                             status=400, mimetype='application/json')
     conn.commit()
+
+@app.route("/list_buildings", methods=['GET'])
+def list_buildings():
+    with conn.cursor() as cur:
+        result = all_buildings(cur)
+        return result

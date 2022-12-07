@@ -7,6 +7,7 @@ import datetime
 from psycopg2.extensions import cursor, AsIs
 
 
+
 def valid_building_id(cur: cursor):
     """
     DOC: Returns all valid Building ID's, for parameter checking
@@ -38,6 +39,12 @@ def valid_asset(cur:cursor):
     cur.execute("select barcode from asset")
     return list(cur)
 
+def all_buildings(cur:cursor):
+    cur.execute("""
+    select name 
+    from building
+    """)
+    return list(cur)
 
 def search_room_db(cur: cursor, room_num: str, building: int):
     """
@@ -45,7 +52,7 @@ def search_room_db(cur: cursor, room_num: str, building: int):
     finding the latest tickets associeted with a
     asset and filters by room and building
     """
-    cur.execute(""" select barcode,model,purch_date,type from
+    cur.execute(""" select barcode,model,purch_date, at.name as type from
     (select a.*, max(t.end_date)
     from asset a
     inner join ticket_asset ta on ta.barcode = a.barcode
@@ -53,7 +60,9 @@ def search_room_db(cur: cursor, room_num: str, building: int):
     inner join room r on t.room_num = r.room_num and t.building = r.building
     inner join building b on b.id = r.building
     where r.room_num = %(room_num)s and  r.building  = %(building)s 
-    group by a.barcode) as latest""", {"room_num": room_num, "building": AsIs(building)})
+    group by a.barcode) as latest
+    inner join asset_type at on at.id = latest.type
+    order by  barcode""", {"room_num": room_num, "building": AsIs(building)})
     return list(cur)
 
 
@@ -107,6 +116,7 @@ def add_ticket_db(cur: cursor,
                                 "tech_id": AsIs(tech_id),"client_name":client_name,
                                 "descr": descr}
     )
+    
     return bool(cur)
 
 #todo need to figure out how to add ticket only if status is valid so all tickets have a status
@@ -181,7 +191,7 @@ def search_ticket_history_db(cur:cursor,
         barcode_where = f"AND a.barcode = {barcode}"
 
     cur.execute("""
-    select t.*,s.name as Status, a.*,ty.name as Type, b.name as Building ,d.name as Dept, te.first_name, te.last_name
+    select t.*,s.name as Status, a.*,ty.name as Type, b.name as Building ,d.name as Dept, te.first_name as Tech_first_name, te.last_name as Tech_last_name
     from ticket t
     inner join ticket_asset ts on t.ticket_num = ts.ticket_num
     inner join asset_status s on s.id = ts.status
