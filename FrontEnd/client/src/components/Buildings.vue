@@ -9,6 +9,7 @@
         <a href="https://www.plu.edu/facilities-management/wp-content/uploads/sites/140/2020/11/anderson-university-center-map.pdf" target="_blank" rel="noopener noreferrer">Anderson University Center</a>
         <br/>
         <a href="/facilities-management/wp-content/uploads/sites/140/2014/11/blomquist.pdf" target="_blank" rel="noopener noreferrer">Blomquist House</a>
+        <br/>
         <a href="https://www.plu.edu/facilities-management/wp-content/uploads/sites/140/2017/01/2017.01.05-westside-bank-map-update-5.pdf">Center for Graduate Studies and Continuing Education</a>
         <br/>
         <a href="https://www.plu.edu/facilities-management/wp-content/uploads/sites/140/2019/10/columbia-center.pdf">Columbia Center</a>
@@ -27,9 +28,7 @@
         <br/>
         <a href="https://www.plu.edu/facilities-management/wp-content/uploads/sites/140/2019/10/harstad-hall1.pdf">Harstad Residence Hall</a>
         <br/>
-        <a href="https://www.plu.edu/facilities-management/wp-content/uploads/sites/140/2020/11/hauge-map.pdf" target="_blank" rel="noopener noreferrer">Hauge Administration Building</a>
-        <br/>
-        <a href="/facilities-management/wp-content/uploads/sites/140/2014/11/health-services.pdf" target="_blank" rel="noopener noreferrer">Health Services Center</a>
+        <a href="/Buildings/admin">Hauge Administration Building</a>
         <br/>
         <a href="https://www.plu.edu/facilities-management/wp-content/uploads/sites/140/2016/12/2016.12.20-combined-1.pdf">Hinderlie Residence Hall</a>
         <br/>
@@ -90,6 +89,9 @@
   
 
 <style scoped>
-
-
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 </style>
