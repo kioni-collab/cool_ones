@@ -11,6 +11,7 @@
                   <th>Client Name</th>
                   <th>Department</th>
                   <th>Building</th>
+                  <th>Room Number</th>
                   <th>Barcode</th>
                   <th>Type</th>
                   <th>Model</th>
@@ -29,6 +30,7 @@
                 <td>{{tickets.client_name}}</td>
                 <td>{{tickets.dept}}</td>  
                 <td>{{tickets.building}}</td> 
+                <td>{{tickets.room_num}}</td> 
                 <td>{{tickets.barcode}}</td> 
                 <td>{{tickets.type}}</td> 
                 <td>{{tickets.model}}</td> 

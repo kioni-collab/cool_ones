@@ -1,10 +1,11 @@
+
 <template>
-    <div class="mw6 center pa3 sans-serif">
-      <h1 class="mb4">tickets</h1>
-  
+    <div class="table">
+      <h2 class="mb4">Tickets</h2>
+      <br/>
       <p v-if="state == 'error'" class="orange">{{ error }}</p>
       <div v-else-if="state == 'ready'">
-        <ticket v-for="tickets in tickets" :tickets="tickets" />
+        <ticket :tickets="tickets" />
       </div>
       <p v-else-if="state == 'loading'">Loading tickets...</p>
     </div>
@@ -43,3 +44,8 @@
     }
   };
   </script>
+<style>
+h2{
+  padding-top: 1%;
+}
+</style>
