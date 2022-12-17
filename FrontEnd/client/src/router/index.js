@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home.vue'
 import Buildings from '../components/Buildings.vue'
+import Admin from '../components/Admin.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,6 +15,11 @@ const routes = [
     path: '/buildings',
     name: 'buildings',
     component: Buildings
+  },
+  {
+    path: '/Admin',
+    name: 'admin',
+    component: Admin
   },
 ]
 
