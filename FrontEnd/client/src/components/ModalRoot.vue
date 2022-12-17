@@ -1,4 +1,6 @@
 <template>
+<!-- Source used to make the popup: https://github.com/DJanoskova/Vue.js-Modal-context/blob/master/src/components/common/Modal.vue -->
+
   <Modal :isOpen="!!component" :title="title" @onClose="handleClose">
     <component :is="component" @onClose="handleClose" v-bind="props" />
   </Modal>
@@ -21,17 +23,10 @@ export default {
       this.title = title
       this.props = props
     })
-    document.addEventListener('keyup', this.handleKeyup)
-  },
-  beforeDestroy () {
-    document.removeEventListener('keyup', this.handleKeyup)
   },
   methods: {
     handleClose () {
       this.component = null
-    },
-    handleKeyup (e) {
-      if (e.keyCode === 27) this.handleClose()
     }
   },
   components: { Modal },

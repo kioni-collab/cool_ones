@@ -16271,476 +16271,456 @@
      d="M 639.54056,350.88033 V 156.71848 l 191.94131,-0.002 v 194.16208 z"
      id="217"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 639.54081,546.6595 V 354.11907 l 191.93672,1.67919 0.007,190.31885 z"
      id="219"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.109"
      d="m 639.54081,677.15899 -2.5e-4,-96.77943 11.93997,-5e-4 v -30.4804 l 180.00375,0.53553 -0.008,126.7248 z"
      id="221"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 639.54056,680.40031 V 807.65933 L 831.48045,807.6597 831.48,682.02 Z"
      id="223"
      inkscape:connector-curvature="0"
      inkscape:label="223"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 376.92037,807.6597 376.92,712.5 l 194.09977,5.3e-4 v 95.16097 z"
      id="211A"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 571.01977,710.34145 376.92,710.34 l 3.7e-4,-95.16124 H 571.0203 Z"
      id="211B"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 571.0203,611.8789 376.92,611.34 l 3.7e-4,-191.94083 194.0994,0.002 z"
      id="213"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.1;fill-opacity:1"
      d="m 571.0203,416.15876 -194.10143,-0.59492 10e-4,-191.40438 194.0995,-0.53417 z"
      id="215"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 571.01977,937.62037 376.92,937.62 l 3.7e-4,-126.72113 h 194.0994 z"
      id="209"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 571.01977,1002.8406 376.92,1002.84 v -60.9 h 194.09977 z"
      id="209A"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 367.08096,1107.2987 V 1007.218 H 439.98 l 0.53971,78.3005 h -34.25814 l -0.002,21.7815 z"
      id="207E"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 443.76,1085.52 -7.5e-4,-78.2993 61.44108,-7e-4 0.54,78.3 z"
      id="path207F"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 509.04,1085.52 h 61.44 v -78.3 h -60.9 z"
      id="207G"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 367.08,1109.46 7.5e-4,91.3186 h 73.43875 v -91.3198 z"
      id="207D"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 443.75892,1200.7807 v -91.3197 h 61.98101 v 91.3197 z"
      id="207C"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 509.58016,1200.7797 509.04,1109.46 h 61.97977 l -0.53937,91.3187 z"
      id="207B"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 575.88,1200.78 -1.08,-63.06 21.2392,8e-4 7.5e-4,-13.0208 h 39.66 l -10e-4,76.0811 z"
      id="207A"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 635.7,1122.48 v -115.26 l -60.90095,7e-4 v 80.4601 H 408.42146 v 19.6203 h 166.37759 l 7.5e-4,28.2592 h 19.08 l -7.5e-4,-13.079 z"
      id="207"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 640.08,1095 v -72.18 h 61.14 v -2.58 l 64.98007,4e-4 -7e-5,74.6996 z"
      id="205"
      inkscape:connector-curvature="0"
      inkscape:label="205" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.1;fill-opacity:1"
      d="m 640.0796,1212.7798 4e-4,-85.9798 h 77.28 v 85.98 z"
      id="201D"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.1;fill-opacity:1"
      d="m 721.62,1212.78 v -85.98 h 77.28 v 85.98 z"
      id="201C"
      inkscape:connector-curvature="0"
      inkscape:label="#201C"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 803.16,1212.78 v -85.98 h 77.28 v 85.98 z"
      id="201B"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 884.76,1212.78 v -85.98 h 77.28 l -0.06,85.9798 z"
      id="201A"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 916.44,1094.94 v -74.7 h -82.26 v 74.7 z"
      id="201E"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 966.29962,1212.7798 h 60.90028 V 1022.8192 L 920.69827,1020.24 v 79.02 H 640.08 v 23.22 H 966.3 Z"
      id="201"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 748.79986,937.61985 v -39.18 h 82.67879 v 39.1791 z"
      id="231"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 835.79992,937.61985 H 897.2382 V 885.4197 h -61.43835 z"
      id="227C"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.1;fill-opacity:1"
      d="M 897.2382,861.48143 H 835.79985 L 835.8,809.2812 h 61.4382 z"
      id="227D"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 900.53962,861.48023 v -52.19798 h 61.44165 l 0.53783,52.20143 z"
      id="227E"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 900.53835,885.42158 6e-4,52.1988 h 61.97887 V 898.44023 H 925.0176 v -13.02 z"
      id="227B"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 965.75745,937.62172 v -52.20015 h 62.04225 v 52.2 z"
      id="227A"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 965.75955,861.48023 v -52.19798 l 61.44215,-0.007 0.6001,52.20218 z"
      id="227F"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1031.0401,861.48015 v -52.2 l 61.4445,-0.008 v 52.206 z"
      id="227G"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1096.8033,825.59835 3e-4,-78.29745 60.8941,0.003 0.01,78.29423 z"
      id="227H"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1165.3227,825.59932 h -3.2404 l 0.01,-78.30011 60.8921,0.003 v 78.29719 z"
      id="227I"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1227.3605,825.59835 v -78.29923 l 60.902,0.003 0.01,78.29602 z"
      id="227J"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1292.5851,937.61858 v -52.19873 h 61.4326 V 937.62 Z"
      id="222C"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1357.2536,937.62037 0.01,-52.1988 h 62.0321 l 0.01,52.1988 z"
      id="path222B"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1422.5405,937.62037 v -52.1988 h 61.9725 v 52.20015 z"
      id="222A"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 1292.5818,861.48023 V 809.2806 h 60.8959 l 0.5426,52.19963 z"
      id="222D"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1357.2613,861.48023 -4e-4,-52.19798 h 61.4944 l 0.5377,52.19843 z"
      id="222E"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1422.5436,861.48023 0.5381,-52.19963 h 61.4305 v 52.19918 z"
      id="222F"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1487.8184,861.48143 v -52.19918 h 61.9824 v 52.19798 z"
      id="222G"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1553.0375,861.48143 v -52.19918 h 61.9824 v 67.4391 l -23.9377,-6.7e-4 -0.01,-15.24045 z"
      id="222H"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1703.0927,876.72068 h -84.7735 l 0.547,-131.04118 h 16.2515 v 8.1605 h 67.9792 z"
      id="222I"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1703.0973,937.62135 -84.7811,3.8e-4 V 918.0612 l -3.2993,6.8e-4 v 19.5585 h -127.2043 v -54.3606 h -199.5512 l -0.01,-19.61843 h 300.6604 v 15.24 l 114.1789,-3e-4 z"
      id="222"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1745.5219,781.55932 h -39.1177 v -31.02045 h -67.9804 v -13.0188 l 67.9803,0.11981 v -31.13903 l 39.1118,2e-5 z"
      id="236"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1745.516,677.15933 h -62.2173 v -19.62005 l 10.8614,4.6e-4 V 615.1792 h 51.3595 z"
      id="220C"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1694.1564,611.88004 v -61.97975 l 51.3559,-3.7e-4 v 61.98012 z"
      id="220B"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1694.166,546.6595 -0.01,-62.03457 h 51.3595 v 62.03484 z"
      id="220A"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1681.0778,677.15933 0.01,-19.61959 H 1670.224 V 615.1792 l -51.3563,0.53861 v 60.90007 z"
      id="220D"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1670.2202,611.88004 v -61.97975 l -51.3574,-0.002 -0.01,61.98138 z"
      id="220E"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1670.2221,546.6595 v -62.03457 h -51.3596 l 0.01,62.03457 z"
      id="220F"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1618.8638,354.65665 v 61.50679 l 51.363,-7.6e-4 v -62.03951 z"
      id="220G"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1670.2202,350.87771 h -51.3596 v -61.9812 h 51.3596 z"
      id="220H"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1670.2202,285.60271 h -51.3596 v -60.36579 l 51.3597,-1.61627 z"
      id="220I"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1694.1564,285.60271 0.01,-61.97942 51.3499,-0.001 v 61.9812 z"
      id="220J"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1694.1564,350.87771 v -61.97473 l 51.3559,-0.007 v 61.9812 z"
      id="220K"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1694.1564,416.16344 v -62.04049 l 51.3559,-0.005 v 62.04558 z"
      id="220L"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1735.2054,481.38478 -116.3416,-0.54614 v -61.43506 h 126.6554 v 51.65995 h -10.3106 z"
      id="220"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1814.0462,285.59485 v -128.8731 h 194.09 v 128.8731 z"
      id="216"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 1814.0462,416.15876 V 288.90215 l 194.1018,1.61672 -0.012,125.63989 z"
      id="214"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 1814.0462,546.6595 V 419.39917 h 194.09 V 546.6595 Z"
      id="212"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1814.0377,677.16105 0.01,-127.26239 194.1018,1.62034 -0.011,125.64205 z"
      id="210"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1814.0377,680.40117 0.01,127.25853 h 194.0908 l 0.011,-126.72297 z"
      id="208"
      inkscape:connector-curvature="0" 
-     @click="clickHandler($event.target)"/>
+     @click="openSuccessAlert($event.target)"/>
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 1814.0462,937.61917 V 810.89887 H 2008.137 V 937.6197 Z"
      id="206A"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1924.4399,941.93955 -2e-4,60.89945 h 83.6939 l 0.014,-60.90275 z"
      id="206B"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 2019.0573,1200.7796 h -139.1909 l -0.5518,-193.5589 h 138.6613 z"
      id="204B"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1876.0181,1200.7807 h -127.1954 v -193.56 h 127.1945 z"
      id="204A"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1745.5145,1200.7807 10e-5,-181.6204 -192.4823,2e-4 0.5481,181.6201 z"
      id="202"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+     @click="openSuccessAlert($event.target)" />
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="m 1358.9408,1200.7796 -1.0829,-181.6193 191.9363,2e-4 -0.5346,181.6192 z"
      id="200"
      inkscape:connector-curvature="0"
-     @click="clickHandler($event.target)" />
+    @click="openSuccessAlert($event.target)" />
 </svg>
 
 
 </template>
 
 <script>
+
+import {ModalBus } from '../eventBus'
+import Alert from './Alert'
+import ModalRoot from './ModalRoot'
+
+
 export default {
   name: 'AdminTwo',
-  props: {
-    color: {
-      type: String,
-      default: 'white', // green, green--outline, white
-      required: false
-    },
-    strokeWidth: {
-      type: Number,
-      default: 5,
-      required: false
-    },
-    width: {
-      type: Number,
-      default: 50,
-      required: false
-    },
+  components: {
+    ModalRoot
   },
   methods: {
-        clickHandler(location) {
-            console.log(location.id)
-        },
+        openSuccessAlert (location) {
+         
+      console.log("test")
+      ModalBus.$emit('open', {
+        component: Alert,
+        props: { text: location.id }
+      })
+    }
   }
 }
 </script>
-
-<style lang="css" scoped>
-.green {
-  fill: #61ffab;
-  stroke: none;
-}
-
-.green--outline {
-  fill: #354258;
-  stroke: #61ffab;
-}
-
-.white {
-  fill: mintcream;
-  stroke: none;
-}
-</style>

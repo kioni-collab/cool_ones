@@ -8,12 +8,12 @@
 import ticket from "@/components/Tickets.vue";
 export default {
   props: {
-    type: {
-      type: String,
-      value: 'error' | 'info' | 'success' | 'warning'
-    },
     text: String
   },
+  name: "app",
+    components: {
+      ticket
+    },
   data() {
       return {
         tickets: [],
@@ -26,19 +26,6 @@ export default {
       this.loadTickets();
     },
   computed: {
-    color () {
-      switch (this.type) {
-        case 'error':
-          return 'red'
-        case 'success':
-          return 'teal'
-        case 'warning':
-          return 'orange'
-        case 'info':
-        default:
-          return 'gray'
-      }
-    },
     filteredTickets: function(){
             return this.tickets.filter((tickets) =>{
                 return tickets.room_num.match(text)
