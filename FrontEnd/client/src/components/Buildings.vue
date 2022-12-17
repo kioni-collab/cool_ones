@@ -28,7 +28,6 @@
         <br/>
         <a href="https://www.plu.edu/facilities-management/wp-content/uploads/sites/140/2019/10/harstad-hall1.pdf">Harstad Residence Hall</a>
         <br/>
-        admin-svg
         <router-link to="/Admin" >Hauge Administration Building</router-link>       
         <br/>
         <a href="/facilities-management/wp-content/uploads/sites/140/2014/11/health-services.pdf" target="_blank" rel="noopener noreferrer">Health Services Center</a>
