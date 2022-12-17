@@ -1,11 +1,15 @@
 <template>
   <div >
-     <ticket :tickets="filteredTickets" />
+    <h1>{{text}}</h1>
+   
+    <ticket :tickets="filteredTickets" />
+
   </div>
 </template>
 
 <script>
 import ticket from "@/components/Tickets.vue";
+
 export default {
   props: {
     text: String
@@ -19,20 +23,10 @@ export default {
         tickets: [],
         error: "",
         state: "loading",
-        search:""
       };
     },
      created() {
       this.loadTickets();
-    },
-  computed: {
-    filteredTickets: function(){
-            return this.tickets.filter((tickets) =>{
-                return tickets.room_num.match(text)
-           
-            })
-        }
-
     },
   methods: {
       async loadTickets() {
@@ -45,6 +39,15 @@ export default {
           this.state = "error";
         }
       }
-    }
+    },
+    computed: {
+    filteredTickets: function(){
+            return this.tickets.filter((tickets) =>{
+                return tickets.room_num.match(text)
+           
+            })
+        }
+
+    },
 };
 </script>

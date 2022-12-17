@@ -16360,7 +16360,7 @@
   <path
      style="fill:#000000;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;opacity:0.1"
      d="M 509.58016,1200.7797 509.04,1109.46 h 61.97977 l -0.53937,91.3187 z"
-     id="207B"
+     id="207-B"
      inkscape:connector-curvature="0"
      @click="openSuccessAlert($event.target)" />
   <path
@@ -16712,6 +16712,7 @@ export default {
   components: {
     ModalRoot
   },
+  
   methods: {
         openSuccessAlert (location) {
          
