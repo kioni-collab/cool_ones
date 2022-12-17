@@ -29,7 +29,13 @@ const routes = [
     path: '/search',
     name: 'search',
     component: SearchView
-  }
+  admin-svg
+  },{
+  path: '/Admin',
+  name: 'admin',
+  component: Admin
+},
+
   
   
 ]

@@ -16,7 +16,6 @@
   </template>
   
   <script>
-  import axios from 'axios';
   import ticket from "@/components/Tickets.vue";
   
   export default {
